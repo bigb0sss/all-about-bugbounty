@@ -6,6 +6,7 @@
 # 	- httpx
 #	- nuclei
 #	- jaeles
+#   - dirsearch
 
 echo "[INFO] Updating..."
 apt-get update >/dev/null 2>&1 && 
@@ -48,7 +49,14 @@ wget https://github.com/jaeles-project/jaeles/releases/download/beta-v0.16/jaele
 unzip jaeles-v0.16-linux-amd64.zip >/dev/null 2>&1 &&
 rm jaeles-v0.16-linux-amd64.zip &&
 mv jaeles-v0.16-linux-amd64 jaeles &&
-/opt/subdomain/jaeles config init
+/opt/subdomain/jaeles config init &&
+
+cd /opt &&
+
+# dirsearch install
+echo "[INFO] Installing Dirsearch..."
+git clone https://github.com/maurosoria/dirsearch >/dev/null 2>&1 &&
+
 
 echo "[INFO] Kali is Ready for Hunting!"
 
