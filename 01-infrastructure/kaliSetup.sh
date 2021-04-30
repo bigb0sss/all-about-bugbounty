@@ -47,7 +47,8 @@ echo "[INFO] Installing jaeles..."
 wget https://github.com/jaeles-project/jaeles/releases/download/beta-v0.16/jaeles-v0.16-linux-amd64.zip >/dev/null 2>&1 &&
 unzip jaeles-v0.16-linux-amd64.zip >/dev/null 2>&1 &&
 rm jaeles-v0.16-linux-amd64.zip &&
-mv jaeles-v0.16-linux-amd64 jaeles
+mv jaeles-v0.16-linux-amd64 jaeles &&
+/opt/subdomain/jaeles config init
 
 echo "[INFO] Kali is Ready for Hunting!"
 
