@@ -2,6 +2,7 @@
 #
 # Tools:
 #	- amass
+#   - subfinder (https://github.com/projectdiscovery/subfinder)
 #	- dnsx
 # 	- httpx
 #	- nuclei
@@ -16,6 +17,10 @@ cd /opt/subdomain &&
 # amass install
 echo "[INFO] Installing Amass..."
 apt-get install amass -y >/dev/null 2>&1 &&
+
+# subfinder install
+echo "[INFO] Installing Subfinder..."
+apt-get install subfinder -y >/dev/null 2>&1 &&
 
 # commonpeak2
 echo "[INFO] Downloading Commonpeak2"
@@ -60,7 +65,6 @@ git clone https://github.com/maurosoria/dirsearch >/dev/null 2>&1 &&
 # SecList install
 echo "[INFO] Installing SecList..."
 git clone https://github.com/danielmiessler/SecLists.git >/dev/null 2>&1 &&
-
 
 echo "[INFO] Kali is Ready for Hunting!"
 
