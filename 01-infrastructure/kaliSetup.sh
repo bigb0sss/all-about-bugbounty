@@ -63,8 +63,8 @@ echo "[INFO] Installing Dirsearch..."
 git clone https://github.com/maurosoria/dirsearch >/dev/null 2>&1 &&
 
 # SecList install
-echo "[INFO] Installing SecList..."
-git clone https://github.com/danielmiessler/SecLists.git >/dev/null 2>&1 &&
+#echo "[INFO] Installing SecList..."
+#git clone https://github.com/danielmiessler/SecLists.git >/dev/null 2>&1 &&
 
 echo "[INFO] Kali is Ready for Hunting!"
 
