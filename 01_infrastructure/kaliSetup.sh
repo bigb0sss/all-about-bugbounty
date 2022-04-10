@@ -9,8 +9,15 @@
 #	- jaeles
 #   - dirsearch
 
+echo "[INFO] Adding Kali's Repository..."
+mv /etc/apt/sources.list /etc/apt/sources.list.bak &&
+echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list &&
+gpg --keyserver pgpkeys.mit.edu --recv-key  ED444FF07D8D0BF6 &&
+gpg -a --export ED444FF07D8D0BF6 | sudo apt-key add - &&
+
 echo "[INFO] Updating..."
 apt-get update >/dev/null 2>&1 && 
+apt-get install git -y &&
 mkdir /opt/subdomain &&
 cd /opt/subdomain &&
 
@@ -64,7 +71,7 @@ git clone https://github.com/maurosoria/dirsearch >/dev/null 2>&1 &&
 
 # SecList install
 #echo "[INFO] Installing SecList..."
-#git clone https://github.com/danielmiessler/SecLists.git >/dev/null 2>&1 &&
+git clone https://github.com/danielmiessler/SecLists.git >/dev/null 2>&1 &&
 
 echo "[INFO] Kali is Ready for Hunting!"
 
