@@ -1,6 +1,6 @@
 # All About Bugbounty (AABB)
 
-## CVEs
+## CVE Search
 | Name | Description | Category | URL |
 | :--- | :---: | :--- | :--- |
 | cvetrends | crowdsourced CVE intel | Intel | https://cvetrends.com/ |
