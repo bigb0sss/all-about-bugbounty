@@ -3,7 +3,7 @@ Desc    : This tool is to automatically check for API permissions
 Author  : bigb0ss
 Dev     :
     - (1) GET Request [Complete]
-        - You can include an access token into 'token.cfg' file; otherwise, it will be an unauthorized mode
+        - You can create & include an access token into 'token.cfg' file; otherwise, it will be an unauthorized mode
     - (2) POST Request [Not Started]
 '''
 
